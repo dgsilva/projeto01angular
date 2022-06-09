@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class EmpresasService {
 
-  endpoint:string = "http://localhost:8080/api/empresas";
+  endpoint:string =  environment.apiUrl + "/empresas";
 
   constructor(private httpClient:HttpClient) {}
 

@@ -47,6 +47,9 @@ export class ConsultaEmpresasComponent implements OnInit {
   //função executada para excluir uma empresa
   excluir(id: number): void {
  
+    this.mensagem_sucesso = '';
+    this.mensagem_erro = '';
+ 
     if (window.confirm('Deseja realmente excluir a empresa selecionada?')) {
  
       //fazendo uma chamada de exclusão na API (DELETE)
@@ -65,3 +68,5 @@ export class ConsultaEmpresasComponent implements OnInit {
   }
  
 }
+ 
+

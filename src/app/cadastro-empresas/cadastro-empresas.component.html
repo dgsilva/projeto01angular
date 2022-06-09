@@ -5,7 +5,7 @@
         <p class="card-text">Preencha os campos abaixo para incluir uma empresa.</p>
  
         <hr />
-
+ 
         <div *ngIf="mensagem_sucesso" class="alert alert-success">
             Sucesso: <strong>{{mensagem_sucesso}}</strong>
         </div>
@@ -13,7 +13,6 @@
         <div *ngIf="mensagem_erro" class="alert alert-danger">
             Erro: <strong>{{mensagem_erro}}</strong>
         </div>
-
  
         <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
  
@@ -62,7 +61,8 @@
                 </div>
                 <div class="col-md-3">
                     <label>CNPJ:</label>
-                    <input type="text" class="form-control" formControlName="cnpj" />
+                    <input type="text" class="form-control" formControlName="cnpj"
+                        mask="00.000.000/0000-00" />
  
                     <div class="text-danger" *ngIf="form.cnpj.touched && form.cnpj.invalid">
  
@@ -93,3 +93,5 @@
         </form>
  
     </div>
+</div>
+

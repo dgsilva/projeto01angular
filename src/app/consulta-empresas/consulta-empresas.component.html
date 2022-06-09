@@ -33,7 +33,7 @@
                 <tr *ngFor="let e of empresas | filter : filtro | paginate : { itemsPerPage: 4, currentPage: pagina }">
                     <td>{{e.nomeFantasia | uppercase}}</td>
                     <td>{{e.razaoSocial}}</td>
-                    <td>{{e.cnpj}}</td>
+                    <td>{{e.cnpj | mask: '00.000.000/0000-00'}}</td>
                     <td>
                         <a class="btn btn-primary btn-sm"
                             [routerLink]="['/edicao-empresas', e.idEmpresa]">
